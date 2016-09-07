@@ -1,6 +1,8 @@
 # ng-caption-hover
-
 [![Bower Version][bower-image]][bower-url]
+[![Build Status][build-image]][build-url]
+[![Dependency Status][depstat-image]][depstat-url]
+[![Code Climate][gpa-image]][gpa-url]
 
 ## About
     This module will make add a caption along with a hover effect with a custom template using jQuery and
