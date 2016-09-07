@@ -52,7 +52,7 @@
 ```
 
 ## Get Started
-Get the package:
+Download the source from git and browse to the folder and run this to install dependencies (angular & jQuery):
 
 ```sh
     bower install
