@@ -20,7 +20,7 @@
             When you hover on this, you see me
         </div>
     </div>
-
+```
 
 ### Paragraph
 
@@ -34,7 +34,7 @@
             When you hover this element, you see me
         </div>
     </div>
-
+```
 
 ### List
 
@@ -52,14 +52,14 @@
             </div>
         </div>
     </div>
-
+```
 
 ## Get Started
     Get the package:
 
 ```sh
     bower install
-
+```
 
     Add the script tags:
 
@@ -68,13 +68,13 @@
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="dist/ng-caption-hover.min.js"></script>
-
+```
 
     Then add the module to your app:
 
 ```js
         angular.module('yourApp', ['ng-caption-hover']);
-
+```
 
 ## Usage
 
@@ -89,4 +89,4 @@
         We put the body of the hover caption into here.
     </div>
 </div>
-
+```
