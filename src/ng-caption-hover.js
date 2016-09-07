@@ -13,7 +13,6 @@
         return {
             restrict: 'A',
             controller: ['$scope', '$element', function ($scope, $element) {
-                this.contentBody = '';
                 this.config = {contentWidth: 0, contentHeight: 0}
                 var ctrl = this;
                 ctrl.$appendContent = function () {
