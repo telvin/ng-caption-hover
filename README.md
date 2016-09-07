@@ -52,10 +52,10 @@
 ```
 
 ## Get Started
-Download the source from git and browse to the folder and run this to install dependencies (angular & jQuery):
+Get the package:
 
 ```sh
-    bower install
+    bower install ng-caption-hover
 ```
 
 Add the script tags:
