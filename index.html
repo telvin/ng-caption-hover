@@ -5,17 +5,18 @@
     <title>Ng-caption-hover by telvin</title>
     <script>document.write('<base href="' + document.location + '" />');</script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
 
+
     <link rel="stylesheet" type="text/css" href="dist/ng-caption-hover.min.css" media="screen">
     <script src="bower_components/jquery/dist/jquery.min.js" data-semver="2.2.4"></script>
     <script data-require="angular.min.js@1.5.x" src="bower_components/angular/angular.min.js"
             data-semver="1.5.8"></script>
-    <!--<script src="dist/ng-caption-hover.min.js"></script>-->
-    <script src="src/ng-caption-hover.js"></script>
+    <script src="dist/ng-caption-hover.min.js"></script>
     <script src="demo/app.js"></script>
 
 </head>
@@ -29,6 +30,9 @@
 </section>
 
 <section class="main-content">
+    <h2>About</h2>
+    <p>This module will make add a caption along with a hover effect with a custom template using jQuery and
+        Angular.</p>
 
     <h3>Image</h3>
 
@@ -56,7 +60,53 @@
         </div>
     </div>
 
-    <h3>Usage</h3>
+    <h3>List</h3>
+    <div class="row">
+        <div class="col-md-3 text-center" ng-repeat="item in [1,2,3,4] track by $index">
+            <div ng-caption-hover-root>
+                <div ng-caption-hover-content>
+                    <img src="demo/sample.jpg">
+                </div>
+
+                <div ng-caption-hover-caption>
+                    <p>When you hover on this, you see me. I'm {{$index+1}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <h2>Get Started</h2>
+    <p>Get the package:</p>
+    <pre>bower install</pre>
+
+    <p>Add the script tags:</p>
+    <pre>
+
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;dist/ng-caption-hover.min.css&quot; media=&quot;screen&quot;&gt;
+        &lt;script src=&quot;bower_components/jquery/dist/jquery.min.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;bower_components/angular/angular.min.js&quot;&gt;&lt;/script&gt;
+         &lt;script src=&quot;dist/ng-caption-hover.min.js&quot;&gt;&lt;/script&gt;
+    </pre>
+
+    <p>Then add the module to your app:</p>
+    <pre>
+        angular.module('yourApp', ['ng-caption-hover']);
+    </pre>
+
+    <h2>Usage</h2>
+    <pre>
+        &lt;<b>div ng-caption-hover-root</b>&gt;
+            &lt;div <b>ng-caption-hover-content</b>&gt;
+                We put the visible content into here.
+                When user hovers on this area, the caption would show.
+            &lt;/div&gt;
+
+            &lt;div <b>ng-caption-hover-caption</b>&gt;
+                We put the body of the hover caption into here.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    </pre>
 
 
     <footer class="site-footer">
