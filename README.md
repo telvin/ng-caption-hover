@@ -6,9 +6,9 @@
     This module will make add a caption along with a hover effect with a custom template using jQuery and
         Angular.
 
-    ## Examples
+## Examples
 
-    ### Image
+### Image
 
 ```html
     <div ng-caption-hover-root>
@@ -22,7 +22,7 @@
     </div>
 
 
-    ### Paragraph
+### Paragraph
 
 ```html
     <div ng-caption-hover-root ng-if="dummyText">
@@ -36,7 +36,7 @@
     </div>
 
 
-    ### List
+### List
 
 ```html
     <div class="row">
@@ -54,7 +54,7 @@
     </div>
 
 
-    ## Get Started
+## Get Started
     Get the package:
 
 ```sh
@@ -76,18 +76,17 @@
         angular.module('yourApp', ['ng-caption-hover']);
 
 
-    ## Usage
+## Usage
 
 ```html
  <div ng-caption-hover-root>
-            <div ng-caption-hover-content>
-                We put the visible content into here.
-                When user hovers on this area, the caption would show.
-            </div>
+    <div ng-caption-hover-content>
+        We put the visible content into here.
+        When user hovers on this area, the caption would show.
+    </div>
 
-            <div ng-caption-hover-caption>
-                We put the body of the hover caption into here.
-            </div>
-        </div>
+    <div ng-caption-hover-caption>
+        We put the body of the hover caption into here.
+    </div>
+</div>
 
-        
