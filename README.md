@@ -55,13 +55,13 @@
 ```
 
 ## Get Started
-    Get the package:
+Get the package:
 
 ```sh
     bower install
 ```
 
-    Add the script tags:
+Add the script tags:
 
 ```html
     <link rel="stylesheet" type="text/css" href="dist/ng-caption-hover.min.css" media="screen">
@@ -70,7 +70,7 @@
     <script src="dist/ng-caption-hover.min.js"></script>
 ```
 
-    Then add the module to your app:
+Then add the module to your app:
 
 ```js
         angular.module('yourApp', ['ng-caption-hover']);
