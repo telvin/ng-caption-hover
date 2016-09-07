@@ -9,19 +9,18 @@
 
     var m = angular.module('ng-caption-hover', []);
 
-    m.directive('ngCaptionHoverRoot', ['$timeout', '$parse', '$interpolate', function ($timeout, $parse, $interpolate) {
+    m.directive('ngCaptionHoverRoot', ['$timeout', function ($timeout) {
         return {
             restrict: 'A',
             controller: ['$scope', '$element', function ($scope, $element) {
                 this.contentBody = '';
                 this.config = {contentWidth: 0, contentHeight: 0}
                 var ctrl = this;
-                ctrl.$appendContent = function (templateElement) {
+                ctrl.$appendContent = function () {
 
-                    var content = templateElement.html();
                     $timeout(function(){
-                        ctrl.contentBody += $interpolate(content)($scope);
-                        $element.html(ctrl.contentBody)
+
+
                         var configHeight =  $($element).height();
 
                         var positionTop = configHeight/2;
@@ -57,15 +56,15 @@
                                     '-ms-transform': 'translateY(-'+positionTop+'px)',
                                     '-o-transform':'translateY(-'+positionTop+'px)'});
                             }, function () {
-                                //console.log('hover out')
                                 $(caption).removeAttr("style")
                                 $(caption).css({top: configHeight + 'px'});
                             })
                         }
-
-                        templateElement.empty();
                     })
                 }
+
+
+
             }],
             link: function (scope, element) {
                 $(element).addClass('hover-container');
@@ -98,8 +97,6 @@
             transclude: true,
             template: '<div class="caption"> <div class="blur"><div class="caption-text"><div class="caption-text-body" ng-transclude></div></div></div></div>',
             link: function (scope, element, attrs, controllers) {
-
-                $(element).addClass('caption');
 
                 controllers[0].$appendContent(element);
             }
