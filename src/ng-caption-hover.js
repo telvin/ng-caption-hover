@@ -21,7 +21,6 @@
                     var content = templateElement.html();
                     $timeout(function(){
                         ctrl.contentBody += $interpolate(content)($scope);
-                        console.log(ctrl.contentBody)
                         $element.html(ctrl.contentBody)
                         var configHeight =  $($element).height();
 
