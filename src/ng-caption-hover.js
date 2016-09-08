@@ -12,17 +12,23 @@
     m.directive('ngCaptionHoverRoot', ['$timeout', function ($timeout) {
         return {
             restrict: 'A',
-            controller: ['$scope', '$element', function ($scope, $element) {
+            controller: ['$scope', '$element', '$attrs', function ($scope, $element, $attrs) {
                 this.config = {contentWidth: 0, contentHeight: 0}
                 var ctrl = this;
+
+                /*$scope.$watch($attrs.ngCaptionHoverRoot, function (newVal, oldVal) {
+
+                }, true);*/
+
                 ctrl.$appendContent = function () {
 
                     $timeout(function(){
-
+                        var coverRate = $attrs.ngCaptionHoverRoot || '0.5';
+                        coverRate = parseFloat(coverRate);
 
                         var configHeight =  $($element).height();
 
-                        var positionTop = configHeight/2;
+                        var positionTop = configHeight * coverRate;
                         var blurCaption = $element[0].getElementsByClassName('blur')
                         if(blurCaption.length > 0){
                             $(blurCaption).css({width: Math.ceil(ctrl.config.contentWidth), height: positionTop});

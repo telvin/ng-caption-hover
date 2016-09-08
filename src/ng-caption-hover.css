@@ -1,45 +1,6 @@
-.hover-container {
-    padding: 0;
-    position: relative;
-    overflow: hidden
-}
-
-.hover-container .content {
-    z-index: 4
-}
-
-.hover-container .caption {
-    cursor: pointer;
-    position: absolute;
-    opacity: 0;
-    -webkit-transition: all .15s ease-in-out;
-    -moz-transition: all .15s ease-in-out;
-    -o-transition: all .15s ease-in-out;
-    -ms-transition: all .15s ease-in-out;
-    transition: all .15s ease-in-out
-}
-
-.hover-container:hover .caption {
-    opacity: 1
-}
-
-.hover-container .caption .blur {
-    background-color: rgba(0, 0, 0, .7);
-    z-index: 5;
-    position: absolute
-}
-
-.hover-container .caption-text {
-    z-index: 10;
-    color: #fff;
-    position: absolute;
-    text-align: center;
-    display: table;
-    width: 100%;
-    height: 100%
-}
-
-.caption-text-body {
-    display: table-cell;
-    vertical-align: middle
-}
+.hover-container{padding:0;position:relative;overflow:hidden}.hover-container .content{z-index:4}
+.hover-container .caption{cursor:pointer;position:absolute;opacity:0;-webkit-transition:all .15s ease-in-out;-moz-transition:all .15s ease-in-out;-o-transition:all .15s ease-in-out;-ms-transition:all .15s ease-in-out;transition:all .15s ease-in-out}
+.hover-container:hover .caption{opacity:1;}
+.hover-container .caption .blur{background-color:rgba(0,0,0,.7);z-index:5;position:absolute}
+.hover-container .caption-text{z-index:10;color:#fff;position:absolute;text-align:center;display:table;}
+.caption-text-body{display: table-cell;vertical-align: middle}
